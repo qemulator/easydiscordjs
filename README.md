@@ -7,7 +7,7 @@
   
   *A feature-rich Discord bot template built with Discord.js*
   
-  ![Build Status](https://img.shields.io/github/workflow/status/yourusername/easydiscordjs/CI?style=for-the-badge&logo=github-actions&logoColor=white)
+  ![Build Status](https://img.shields.io/github/workflow/status/qemulator/easydiscordjs/CI?style=for-the-badge&logo=github-actions&logoColor=white)
   ![Version](https://img.shields.io/github/v/release/yourusername/easydiscordjs?style=for-the-badge&logo=semantic-release&logoColor=white)
   ![License](https://img.shields.io/github/license/yourusername/easydiscordjs?style=for-the-badge&logo=open-source-initiative&logoColor=white)
   ![Discord.js](https://img.shields.io/badge/discord.js-v14.14.1-5865F2?style=for-the-badge&logo=discord&logoColor=white)
@@ -53,7 +53,7 @@ Clone and set up EasyDiscordJS in just a few steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/easydiscordjs.git
+git clone https://github.com/qemulator/easydiscordjs.git
 cd easydiscordjs
 
 # Install dependencies
@@ -81,53 +81,34 @@ Edit your `config.json` file with your bot's details:
 
 ```json
 {
-  "token": "YOUR_BOT_TOKEN_HERE",
-  "prefix": "!",
-  "ownerID": "YOUR_DISCORD_USER_ID",
-  "features": {
-    "moderation": true,
-    "music": true,
-    "welcomeMessages": true,
-    "autoRole": true
-  }
+    "algoraBot": {
+        "clientToken": "BOTTOKEN",
+        "clientId": "CLIENTID",
+        "guildId": "GUILDID",
+        "ownerId": ["OWNERID"],
+        "presenceMessage": "PRESENCE MESSSAGE"
+    },
+
+    "botSettings": {
+        "colorAccent": "#4d4d4d"
+    }
 }
 ```
 
 ---
 
-## Features Overview
+## Slash Commands
 
-### Moderation Tools
-Complete moderation suite with kick, ban, mute, warn, and automated moderation features.
-
-### Music System  
-Full-featured music bot with queue management, playlists, and audio controls.
-
-### Welcome System
-Customizable welcome and goodbye messages with role assignment capabilities.
-
-### Utility Commands
-Server information, user lookup, role management, and administrative utilities.
-
-### Fun & Entertainment
-Games, random generators, image manipulation, and interactive entertainment features.
-
-### Customization
-Extensive configuration options for colors, messages, permissions, and feature toggles.
-
----
-
-## Default Commands
-
-Once configured, your bot will respond to these commands:
+Once configured, your bot will respond to these slash commands:
 
 | Command | Description | Usage |
 |---------|-------------|-------|
-| `!help` | Display all available commands | `!help [category]` |
-| `!ping` | Check bot latency and status | `!ping` |
-| `!info` | Show detailed bot information | `!info` |
-| `!stats` | Display server statistics | `!stats` |
-| `!config` | View current bot configuration | `!config` |
+| `/help` | Display all available commands | `/help` |
+| `/ping` | Check bot latency and status | `/ping` |
+| `/reload` | Reload bot commands (owner only) | `/reload` |
+| `/kick` | Kick a user from the server | `/kick @user [reason]` |
+| `/timeout` | Timeout a user in the server | `/timeout @user [duration] [reason]` |
+| `/ban` | Ban a user from the server | `/ban @user [reason]` |
 
 ---
 
@@ -169,11 +150,11 @@ Get help when you need it through multiple support channels:
 
 ### Community Support
 - **Discord Server**: [Join our community](your-discord-invite-link)
-- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/easydiscordjs/issues)
-- **Discussions**: [Ask questions and share tips](https://github.com/yourusername/easydiscordjs/discussions)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/qemulator/easydiscordjs/issues)
+- **Discussions**: [Ask questions and share tips](https://github.com/qemulator/easydiscordjs/discussions)
 
 ### Documentation
-- **Wiki**: [Comprehensive guides and tutorials](https://github.com/yourusername/easydiscordjs/wiki)
+- **Wiki**: [Comprehensive guides and tutorials](https://github.com/qemulator/easydiscordjs/wiki)
 - **FAQ**: [Frequently asked questions](docs/faq.md)
 
 ---
@@ -187,27 +168,6 @@ We welcome contributions from developers of all skill levels. Here's how you can
 - Improve documentation and examples  
 - Submit code improvements and new features
 - Help other users in our community channels
-
-### Development Setup
-
-```bash
-# Fork and clone your fork
-git clone https://github.com/your-username/easydiscordjs.git
-
-# Create a feature branch
-git checkout -b feature/your-feature-name
-
-# Make your changes and test thoroughly
-npm test
-
-# Commit with a clear message
-git commit -m "Add: your feature description"
-
-# Push and create a pull request
-git push origin feature/your-feature-name
-```
-
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for detailed information about our development process and coding standards.
 
 ---
 
