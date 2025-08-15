@@ -59,9 +59,6 @@ cd easydiscordjs
 # Install dependencies
 npm install
 
-# Copy configuration template
-cp config.example.json config.json
-
 # Edit your configuration (add your bot token)
 # Then start your bot
 npm start
